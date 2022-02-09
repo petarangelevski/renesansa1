@@ -1,0 +1,816 @@
+/*   $desktop:1200px;
+  $laptop:1024px;
+  $tablet:768px;
+  $phone:480px;f */
+  @import url("https://fonts.googleapis.com/css?family=Catamaran:400,700|Grand+Hotel");
+
+  @font-face {
+      font-family: 'Allison-Regular';
+      src: url('./fonts/Allison-Regular.eot'); /* IE9 Compat Modes */
+      src: url('./fonts/Allison-Regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+           url('./fonts/Allison-Regular.woff2') format('woff2'), /* Super Modern Browsers */
+           url('./fonts/Allison-Regular.woff') format('woff'), /* Pretty Modern Browsers */
+           url('./fonts/Allison-Regular.ttf')  format('truetype'), /* Safari, Android, iOS */
+           url('./fonts/Allison-Regular.svg#svgFontName') format('svg'); /* Legacy iOS */
+    }
+    @font-face {
+        font-family: 'Wolgast Two Normal Cyr';
+        src: url('./fonts/Wolgast-Two-Normal-Cyr.eot');
+        src: url('./fonts/Wolgast-Two-Normal-Cyr.eot?#iefix') format('embedded-opentype'),
+             url('./fonts/Wolgast-Two-Normal-Cyr.otf') format('otf'),
+             url('./fonts/Wolgast-Two-Normal-Cyr.svg#Wolgast%20Two%20Normal%20Cyr') format('svg'),
+             url('./fonts/Wolgast-Two-Normal-Cyr.ttf') format('truetype'),
+             url('./fonts/Wolgast-Two-Normal-Cyr.woff') format('woff'),
+             url('./fonts/Wolgast-Two-Normal-Cyr.woff2') format('woff2');
+      }
+      
+    
+  *{
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+  }
+  :root {
+      --clr-primary: #d6ae89;
+      --clr-primary-light: #CF9661;
+      --clr-grey-1: #102a42;
+      --clr-grey-5: #617d98;
+      --clr-grey-10: #f1f5f8;
+      --clr-white: #fff;
+      --ff-primary: "Catamaran", sans-serif;
+      --ff-secondary: "Grand Hotel", sans-serif;
+      --transition: all 0.3s linear;
+      --spacing: 0.25rem;
+      --radius: 0.5rem;
+  }
+
+.row::after {
+    display: block;
+    clear: both;
+    content: "";
+}
+
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+[class*=col-] {
+    padding: 25px;
+    float: left;
+}
+header {
+    /* position: relative; */
+    background: linear-gradient(to top, rgb(190, 214, 190), green);
+    height: 250px;
+    width: 100%;
+    border: 1px solid black;
+}
+header .col-12{
+    width: 100%;
+    height: 100%;
+    padding: 0;
+}
+.bottom {
+    position: relative;
+    height: 100%;
+    /* background: linear-gradient(
+        rgba(255,255,255,0.2),
+        rgba(255,255,255,0.2)
+    ), url(./forest1.jpg); */
+    /* background-size: cover;
+    background-position: center;  */
+    border-bottom-left-radius: 150px;
+    z-index: 1;
+
+}
+.logo1 {
+    display: flex;
+    position: absolute;
+    z-index: 2;
+    
+    top: 170px;
+    left: 25px;
+    border: 4px solid whitesmoke;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+.backgroundimg {
+    /* position: absolute; */
+    height: 100%;
+    background: url(./images/forest1.jpg);
+    background-size: cover;
+    background-position: center;
+    border-bottom-left-radius: 50rem;
+    opacity: 0.70;
+}
+.header-picture {
+    width: 100px;
+}
+.logo2 {
+    display: flex;
+    position: absolute;
+    right: 50px;
+    top: 75px;
+    z-index: 2;
+    border-radius: 50%;
+    border: 4px solid whitesmoke;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+.h-txt1 {
+    position: absolute;
+    z-index: 3;
+    font-family:'Allison-Regular', Fallback, sans-serif;
+    font-size: 3rem;
+    top: 120px;
+    color: white;
+}
+.h-txt2 {
+    position: absolute;
+    z-index: 3;
+    /* font-family: 'Allison-Regular', Fallback, sans-serif; */
+    font-family: 'Wolgast Two Normal Cyr';
+    font-size: 1.5rem;
+    right: 1%;
+    bottom: 22vh;
+    color: white;
+}
+.line {
+    height: 5vh;
+    background: linear-gradient(
+    rgba(122, 122, 122, 0.8),
+    rgba(0,0,0,0.8)
+    );
+    margin: 0;
+    padding: 0;
+    border: none;
+    position: inherit;
+    bottom: 4.9vh;
+    opacity: 1;
+}
+.line-first {
+    height: 3vh;
+    background: linear-gradient(to top,
+    rgba(122, 122, 122, 0.5),
+    rgba(0,0,0,0.8)
+    );
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+/* 
+==============
+End of Header
+==============
+*/
+/* 
+===============
+Section Menu Start
+===============
+*/
+.first-menu {
+    background-color: whitesmoke;
+}
+.flexbox-container {
+    display: flex;
+}
+.flexbox-item {
+    width: 25%;
+    text-align: center;
+    padding: 2.5rem;
+    transition: var(--transition);
+    -webkit-transition: var(--transition);
+    -moz-transition: var(--transition);
+    -ms-transition: var(--transition);
+    -o-transition: var(--transition);
+    border-right: 1px solid green;
+}
+.menu-title {
+    color: var(--clr-grey-1);
+    text-decoration: none;
+}
+.menu-text {
+    color: var(--clr-grey-1);
+}
+.flexbox-item:hover {
+    background-color: var(--clr-white);
+    box-shadow: 0 5px 15px black;
+}
+/*
+=====================
+End of Menu Section
+=====================
+*/
+
+/* 
+===================
+Start Card Section
+===================
+*/
+.card-flexbox-container {
+    /* background-color: yellowgreen; */
+    height: 180px;
+    display: flex;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    margin-top: 2rem;
+    justify-content: space-;
+}
+.card-flexbox-item {
+    /* height: 40%; */
+    /* border: 2px solid black; */
+    width: 100%;
+    justify-content: space-around;
+}
+
+.card-flexbox-item {
+    display: flex;
+    /* width: 50%; */
+    /* border: 1px solid black; */
+}
+.card-col5 {
+    width: 41.66%;
+    transition: var(--transition);
+    -webkit-transition: var(--transition);
+    -moz-transition: var(--transition);
+    -ms-transition: var(--transition);
+    -o-transition: var(--transition);
+    border-top-right-radius: 5rem;
+    border-bottom-right-radius: 5rem;
+    /* border: 1px solid black; */
+}
+.card-col5:hover {
+    box-shadow: 0 5px 15px black;
+    transform: scale(1.05);
+}
+.card-col2 {
+    width: 16.66%;
+}
+.card-flexbox-item-row {
+    display: flex;
+    width: 100%;
+    /* border: 2px solid black; */
+    box-shadow: 0 5px 10px black;
+    border-top-right-radius: 5rem;
+    border-bottom-right-radius: 5rem;
+}
+.card1-container-picture {
+    width: 50%;
+}
+.pic1 {
+    width: 100%;
+    height: 100%;
+}
+.card1-container-text {
+    font-family: 'Wolgast Two Normal Cyr';
+    width: 50%;
+    display: flex;
+    background-color: whitesmoke;
+    /* font-size: 12px; */
+    /* border: 2px solid black; */
+    border-top-right-radius: 5rem;
+    border-bottom-right-radius: 5rem;
+}
+.card1-container {
+    /* border: 2px solid black;
+    border-top-right-radius: 5rem;
+    border-bottom-right-radius: 5rem; */
+}
+.card-container-text-row {
+    display: flex;
+    /* justify-content: flex-end; */
+}
+.card-apple {
+    width: 50%;
+    height: 50%;
+    /* float: right; */
+    align-self: center;
+    display: flex;
+    justify-content: flex-end;
+    align-content: center;
+}
+.apple1{
+    width:48%;
+    max-height: 80%;
+    /* float: right; */
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    align-self: center;
+    /* justify-self: flex-end; */
+    box-shadow: 0px 5px 15px black;
+} 
+.card-text1 {
+    width: 50%;
+    display: inline-block;
+    padding: 0.5rem;
+}
+.card2-col5 {
+    width: 41.66%;
+    transition: var(--transition);
+    -webkit-transition: var(--transition);
+    -moz-transition: var(--transition);
+    -ms-transition: var(--transition);
+    -o-transition: var(--transition);
+    border-top-left-radius: 5rem;
+    border-bottom-left-radius: 5rem;
+}
+.card2-container {
+        display: flex;
+        width: 100%;
+        /* border: 2px solid black; */
+        box-shadow: 0 5px 10px black;
+        /* border-top-left-radius: 5rem;
+        border-bottom-left-radius: 5rem; */
+
+}
+.card2-flexbox-item-row {
+    display: flex;
+    width: 100%;
+    /* border: 2px solid black; */
+    box-shadow: 0 5px 10px black;
+    border-top-left-radius: 5rem;
+    border-bottom-left-radius: 5rem;
+}
+.card2-container-text {
+    width: 50%;
+    display: flex;
+    background-color: whitesmoke;
+    /* font-size: 12px; */
+    /* border: 2px solid black; */
+    border-top-left-radius: 5rem;
+    border-bottom-left-radius: 5rem;
+}
+.card2-container-text-row {
+    font-family: 'Wolgast Two Normal Cyr';
+    display: flex;
+}
+.card2-apple {
+    width: 50%;
+    height: 50%;
+    /* float: right; */
+    align-self: center;
+    display: flex;
+    justify-content: flex-start;
+    align-content: center;
+}
+.card2-col5:hover {
+    box-shadow: 0 5px 15px black;
+    transform: scale(1.05);
+}
+.middle-pic {
+    width: 80%;
+    height: 80%;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    box-shadow: 0 5px 15px black;
+    justify-self: center;
+    align-self: center;
+}
+.card.col2 {
+    /* justify-content: space-between; */
+    display: flex;
+}
+/* 
+================
+Start of Main
+================
+*/
+.main {
+    margin-top: 2rem;
+    /* border: 1px solid green; */
+}
+.main-row {
+    display: flex;
+    height: 300px;
+    /* border: 1px solid red; */
+}
+.main-item {
+    width: 40%;
+}
+.main-item-picture {
+    width: 20%;
+    display: flex;
+    justify-content: center;
+}
+.main-text {
+    /* width: 100%; */
+    height: 100%;
+    /* border: 1px solid navy; */
+    background: whitesmoke;
+    /* font-family:'Allison-Regular', Fallback, sans-serif; */
+    /* font-family: var(--ff-secondary); */
+    font-family: 'Wolgast Two Normal Cyr';
+    box-shadow: 0 5px 15px black;
+    font-size: 1.125rem;
+    max-width: 40%;
+    margin: 0;
+    text-align: center;
+    padding: 0.5rem;
+}
+.main-picture {
+    height: 100%;
+    /* border: 1px solid yellow; */
+}
+.main-table {
+    height: 100%;
+    /* border: 1px solid crimson; */
+    background-image: linear-gradient(
+        rgba(255,255,255,0.5),
+        rgba(255,255,255,0.5)
+    )
+    ,url(./images/headerimg.jpg);
+    background-position: center;
+    background-size: cover;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.4);
+    /* border: 1px solid black; */
+    max-width: 40%;
+    /* height: 22rem; */
+    /* margin-right: 1rem; */
+    align-items: center;
+}
+.main-paragraph  a{
+    text-decoration: none;
+    color: darkgreen;
+    transition: var(--transition);
+    -webkit-transition: var(--transition);
+    -moz-transition: var(--transition);
+    -ms-transition: var(--transition);
+    -o-transition: var(--transition);
+}
+.main-paragraph .renesansa:hover{
+    /* shadow: 0 5px 15px black; */
+    transform: scale(1.05);
+    -webkit-transform: scale(1.05);
+    -moz-transform: scale(1.05);
+    -ms-transform: scale(1.05);
+    -o-transform: scale(1.05);
+    color: greenyellow;
+}
+.main-paragraph a:hover {
+    text-shadow: 0 5px 15px black;
+    color: lawngreen;
+    font-size: 2rem;
+}
+.main-table th{
+    background-color: rgb(199, 58, 23);
+    font-family: 'Wolgast Two Normal Cyr';
+}
+.main-table th, td {
+    box-shadow: 0 5px 15px rgba(0,0,0,0.4);
+    /* border: 1px solid black; */
+    width: 5rem;
+    height: 3rem;
+}
+.table-icon {
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    /* border: 1px solid black; */
+    box-shadow: 0px 2px 18px white;
+}
+.table2 {
+    table-layout: fixed;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    font-size: 1.5rem;
+}
+.dmaslinka {
+    font-size: 1.1rem;
+}
+.pivica {
+    font-size: 1.1rem;
+}
+.main-table a{
+    color: black;
+}
+.main-table td{
+    transition: var(--transition);
+    -webkit-transition: var(--transition);
+    -moz-transition: var(--transition);
+    -ms-transition: var(--transition);
+    -o-transition: var(--transition);
+}
+.main-table td:hover{
+    box-shadow: 0 5px 15px black;
+    transform: scale(1.05);
+    -webkit-transform: scale(1.05);
+    -moz-transform: scale(1.05);
+    -ms-transform: scale(1.05);
+    -o-transform: scale(1.05);
+}
+a:hover {
+    color: green;
+}
+.table-logo {
+    /* display: flex; */
+    padding-top: 0.4rem;
+}
+.drvce {
+    width: 60%;
+    height: 100%;
+    justify-self: center;
+    /*background-size: cover;
+    background-position: center;
+    */border-radius: 50%;
+    transition: var(--transition);
+    -webkit-transition: var(--transition);
+    -moz-transition: var(--transition);
+    -ms-transition: var(--transition);
+    -o-transition: var(--transition);
+    box-shadow: 0 5px 15px green;
+}
+.drvce:hover {
+    transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -o-transform: scale(1.1);
+}
+/* 
+===============
+FOOTER
+===============
+*/
+.footer{
+    margin-top: 2rem;
+    padding-top: 2rem;
+    height: 100%;
+    background: #313131;
+    padding-bottom: 2rem;
+}
+.footer-social-media {
+    margin-top: 2rem;
+    color: var(--clr-white);
+    text-align: center;
+    font-size: 1.5rem;
+    letter-spacing: 0.55rem;
+    /* margin-left: 3px; */
+}
+.footer-text {
+    margin-top: 1rem;
+    color: var(--clr-white);
+    font-size: 1rem;
+    text-align: center;
+    letter-spacing: var(--spacing);
+}
+.social-icons {
+    color: white;
+}
+.social-icons:hover {
+    color: #5DFC0A;
+}
+@media(max-width: 900px) {
+    .flexbox-container {
+        flex-direction: column;
+        /* float: left; */
+        /* width: 100%; */
+        flex-wrap: wrap;
+    }
+    .flexbox-item {
+        width: 100%;
+    }
+    .card-flexbox-container {
+        flex-direction: column;
+        justify-content: space-between;
+        height: auto;
+        /* flex-wrap: wrap; */
+    }
+    .card-flexbox-item {
+        width: 100%;
+    }
+    .card-col2 {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        width: 50%;
+        align-self: center;
+    }
+    .main-row {
+        flex-direction: column;
+        height: auto;
+        margin-top: 2rem;
+    }
+    .main-text {
+        margin-bottom: 2rem;
+        min-width: 100%;
+    }
+    .main-picture {
+        margin-bottom: 2rem;
+        /* width: 100%; */
+        justify-self: center;
+        align-self: center;
+        min-width: 50%;
+    }
+    .main-table {
+        min-width: 100%;
+    }
+    .main-table th, td{
+        width: 20%;
+    }
+    .main-table th {
+        font-size: 1rem;
+    }
+    .h-txt2 {
+        top: 40px;
+    }
+}
+@media(min-width: 900px) and (max-width: 1245px) {
+    .main-table th, td{
+        width: 20%;
+    }
+    .main-text {
+        font-size: 1rem;
+    }
+    .dmaslinka, .pivica, th {
+        font-size: 1rem;
+    }
+    .card-col5 {
+        font-size: 0.8rem;
+    }
+    .card2-col5 {
+        font-size: 0.8rem;
+    }
+    .dmaslinka {
+        font-size: 0.8rem;
+    }
+    .h-txt2 {
+        top: 40px;
+    }
+}
+@media(min-width:481px) and (max-width:1024px) {
+    .flexbox-container {
+        flex-direction: row;
+    }
+    .flexbox-item {
+        width: 50%;
+    }
+   
+}
+@media(max-width:767px) {
+    #menu {
+        min-width: 767px;
+        height: 310px;
+    }
+    .h-txt2 {
+        top: 40px;
+    }
+}
+/* 
+====================
+Hamburger Menu Style
+-=-=-=-=-=-=-=-=-=-=
+*/
+/* Hamburger menu bez font awesome */
+/* osnovna pozicija na kopceto */
+#menuToggle {
+    display: block;
+    position: fixed;
+    top: 50px;
+    left: 50px;
+    z-index: 999;
+}
+/* anchors in open menu */
+#menuToggle a {
+    text-decoration: none;
+    color: var(--clr-white);
+    transition: color 0.3s ease;
+    -webkit-transition: color 0.3s ease;
+    -moz-transition: color 0.3s ease;
+    -ms-transition: color 0.3s ease;
+    -o-transition: color 0.3s ease;
+}
+/* Hover on anchors */
+#menuToggle a:hover {
+    color: var(--clr-primary-light);
+}
+/* checkbox position on the 3 lines and hide */
+#menuToggle input {
+    display: block;
+    width: 40px;
+    height: 32px;
+    position: absolute;
+    top: -7px;
+    left: -5px;
+    cursor: pointer;
+    opacity: 0; /*go sokrivame checkboxot  */
+     z-index: 9999; /*go stavame preku hamburger menito*/
+}
+/* od ovdeka kade sto se spomnuva span se raboti za 3te crti
+ odnosno hamburger menito - se stilizira i animira se sto se slucuva na klik */
+ #menuToggle span {
+     z-index: 999;
+     display: block;
+     width: 33px;
+     height: 4px;
+     margin-bottom: 5px;
+     position: relative;
+     background: var(--clr-primary);
+     border-radius: 3px;
+     -webkit-border-radius: 3px;
+     -moz-border-radius: 3px;
+     -ms-border-radius: 3px;
+     -o-border-radius: 3px;
+     transform-origin: 4px 0px;
+     transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
+     -webkit-transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
+     -moz-transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
+     -ms-transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
+     -o-transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
+}
+/* ovde se koristat pseudo selektori da manipulirame so tie 3 crti od hamburger menito */
+#menuToggle span:first-child {
+    transform-origin: 0% 0%;
+}
+
+#menuToggle span:nth-last-child(2) {
+    transform-origin: 0% 100%;
+}
+
+/* transformacija na crtite vo X koga ke klikneme */
+/* prva crta */
+#menuToggle input:checked ~ span {
+    opacity: 1;
+    transform: rotate(45deg) translate(-2px, -1px);
+    -webkit-transform: rotate(45deg) translate(-2px, -1px);
+    -moz-transform: rotate(45deg) translate(-2px, -1px);
+    -ms-transform: rotate(45deg) translate(-2px, -1px);
+    -o-transform: rotate(45deg) translate(-2px, -1px);
+}
+
+/* vtora crta */
+/* isceznuvanje na srednata crta */
+#menuToggle input:checked ~ span:nth-last-child(3) {
+    opacity: 0;
+    transform: rotate(0deg) scale(0.2, 0.2);
+    -webkit-transform: rotate(0deg) scale(0.2, 0.2);
+    -moz-transform: rotate(0deg) scale(0.2, 0.2);
+    -ms-transform: rotate(0deg) scale(0.2, 0.2);
+    -o-transform: rotate(0deg) scale(0.2, 0.2);
+}
+/* treta crta */
+/* rotacija na tretata crta za da se formira X */
+#menuToggle input:checked ~ span:nth-last-child(2) {
+    opacity: 1;
+    transform: rotate(-45deg) translate(0, -1px);
+    -webkit-transform: rotate(-45deg) translate(0, -1px);
+    -moz-transform: rotate(-45deg) translate(0, -1px);
+    -ms-transform: rotate(-45deg) translate(0, -1px);
+    -o-transform: rotate(-45deg) translate(0, -1px);
+}
+/* Otvoreno menu */
+#menu {
+    position: absolute;
+    width: 220px;
+    margin: -100px 0 0 -50px;
+    padding: 50px;
+    padding-top: 125px;
+    /* pozadina na otvorenoto menu */
+    background: linear-gradient(to top, rgba(0,0,0,0.5), yellowgreen);
+    list-style-type: none;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.6);
+    /*animacija-pojavuvanje */
+    transform-origin: 0% 0%;
+    transform: translate(-100%, 0);
+    -webkit-transform: translate(-100%, 0);
+    -moz-transform: translate(-100%, 0);
+    -ms-transform: translate(-100%, 0);
+    -o-transform: translate(-100%, 0);
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+    -webkit-transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+    -moz-transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+    -ms-transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+    -o-transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+} 
+
+#menu li {
+    padding: 10px 0;
+    font-size: 22px;
+}
+#menuToggle input:checked ~ ul {
+    transform: none;
+    -webkit-transform: none;
+    -moz-transform: none;
+    -ms-transform: none;
+    -o-transform: none;
+}
